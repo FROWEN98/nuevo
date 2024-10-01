@@ -51,7 +51,7 @@ print("\n\nMatriz original:")
 for filas in listas:
     print(filas)
 
-# Ordenar la segunda fila indice 1
+# Ordenar la segunda fila indice 2
 orden(listas,2)
 
 # Imprimimimos  la lista  después de ordenar
