@@ -4,6 +4,7 @@ list = [
     [2,8,6,7,9,1,10]
     ]   # Declaramos la lista
 
+print(list) #Imprimimos la lista
 def buscar(n,l):    #Creamos una función
     for i in range(len(list)):  #Recorremos filas
         for j in range(len(list)): #Recorremos las columnas
@@ -11,26 +12,53 @@ def buscar(n,l):    #Creamos una función
             return i,j  #Retornamos los inidec
 
     return "No encontramos"
-
+numero = int(input("Que numero desea buscar: "))
 print(list) #Imprimimos la lista
-print("El numero esta en la posición ",buscar(1,list))   #Imprimimos
+print(f"El numero {numero} esta en la posición ",buscar(numero,list))   #Imprimimos
 
 
 #Ordenamos una posición
+def bubble_sort(fila):
+    # Algoritmo de ordenación Bubble Sort
+    n = len(fila)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if fila[j] > fila[j+1]:
+                fila[j], fila[j+1] = fila[j+1], fila[j]
 
+
+
+
+def orden(lista, fila):
+    # Ordena la fila especificada de la matriz
+    if 0 <= fila < len(lista):
+        bubble_sort(lista[fila])
+    else:
+        print("Índice de fila esta fuera de rango.")
+
+
+
+
+# Definición de la matriz
 lista = [
-    [1, 6, 8, 7, 8, 10, 14],
-    [2, 8, 6, 7, 9, 1, 10]
+    [14,15,2,6,17,3,6,8],
+    [10,2,5,6,3,1,11,4,5],
+    [10,9,8,7,6,5,4,3,2,1]
 ]
+# Imprimir matriz original
 
-# Aplanamos la lista en una lista unidimensional
-listas = [elemento for fila in list for elemento in fila]
+print("\n\nMatriz original:")
+for filas in lista:
+    print(filas)
 
-# Ordenamos la lista en orden ascendente
-listas.sort()
+# Ordenar la segunda fila indice 1
+orden(lista,2)
+
+# Imprimimimos  la lista  después de ordenar
+print("\nMatriz después de ordenar la fila :")
+for filas in lista:
+    print(filas)
 
 
 
-# Imprimimos el resultado
-print("Lista  ordenada:", listas)
 
