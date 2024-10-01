@@ -45,7 +45,7 @@ listas = [
     [10,2,5,6,3,1,11,4,5],
     [10,9,8,7,6,5,4,3,2,1]
 ]
-# Imprimir matriz original
+# Imprimir la lista original
 
 print("\n\nMatriz original:")
 for filas in listas:
