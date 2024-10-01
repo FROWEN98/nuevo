@@ -29,10 +29,10 @@ def bubble_sort(fila):
 
 
 
-def orden(lista, fila):
+def orden(listas, fila):
     # Ordena la fila especificada de la matriz
-    if 0 <= fila < len(lista):
-        bubble_sort(lista[fila])
+    if 0 <= fila < len(listas):
+        bubble_sort(listas[fila])
     else:
         print("Índice de fila esta fuera de rango.")
 
@@ -40,7 +40,7 @@ def orden(lista, fila):
 
 
 # Definición de la matriz
-lista = [
+listas = [
     [14,15,2,6,17,3,6,8],
     [10,2,5,6,3,1,11,4,5],
     [10,9,8,7,6,5,4,3,2,1]
@@ -48,15 +48,15 @@ lista = [
 # Imprimir matriz original
 
 print("\n\nMatriz original:")
-for filas in lista:
+for filas in listas:
     print(filas)
 
 # Ordenar la segunda fila indice 1
-orden(lista,2)
+orden(listas,2)
 
 # Imprimimimos  la lista  después de ordenar
 print("\nMatriz después de ordenar la fila :")
-for filas in lista:
+for filas in listas:
     print(filas)
 
 
